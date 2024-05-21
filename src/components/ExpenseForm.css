@@ -1,0 +1,35 @@
+.form_handle {
+    width:70%;
+    margin:5rem auto;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.field input, select{
+    margin:0.5rem auto;
+    width: 40%;
+    height: 1.8rem;
+    outline: none;
+    padding:5px 10px;
+}
+
+.form_handle button{
+    margin:1rem auto;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.erros_field{
+    color: red;
+    font-size: larger;
+    margin: 0;
+    padding:0;
+}
