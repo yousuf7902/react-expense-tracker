@@ -22,9 +22,9 @@ function App() {
         <>
             {/* (expense) => setExpenses([...expenses,{...expense, id:expenses.length+1}]) */}
             <ExpenseForm
-                onSubmit={(expense) =>
-                    setExpenses([...expenses, { ...expense, id: expenses.length + 1 }])
-                }
+                onSubmit={(expense) => {
+                    setExpenses([...expenses, { ...expense, id: expenses.length + 1 }]);
+                }}
             />
             <ExpenseFilter
                 expenses={expenses}

@@ -1,6 +1,23 @@
+body{
+    background-color: #23192F;
+    color:white;
+    box-sizing: border-box;
+}
+
+.form_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
 .form_handle {
-    width:70%;
-    margin:5rem auto;
+    width: 950px;
+    background-color: #2F065C;
+    margin: 1rem 2rem;
+    padding:1rem;
+    border-radius: 20px;
 }
 
 .field {
@@ -9,27 +26,63 @@
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
-.field input, select{
-    margin:0.5rem auto;
-    width: 40%;
+.field input,
+select {
+    margin: 0.5rem auto;
+    width: 45%;
     height: 1.8rem;
     outline: none;
-    padding:5px 10px;
+    padding: 5px 10px;
 }
 
-.form_handle button{
-    margin:1rem auto;
+.form_handle button {
+    margin: 1rem auto;
     padding: 10px 20px;
     outline: none;
     border-radius: 10px;
     border: none;
 }
 
-.erros_field{
+.erros_field {
     color: red;
     font-size: larger;
     margin: 0;
-    padding:0;
+    padding: 0;
+}
+
+.form-select {
+    display: flex;
+    margin: 2rem auto;
+    width: 30%;
+}
+
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.table_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.expense_table {
+    width: 50%;
+    border-collapse: collapse;
+    margin:10px 20px;
+    background-color: #2F065C;
+    
+}
+tr, th ,td{
+   border: 2px solid white; 
+   text-align: center;
+   padding: 5px 10px;
+   font-size: 24px;
 }

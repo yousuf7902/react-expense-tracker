@@ -1,36 +1,40 @@
+import "./ExpenseForm.css";
+
 function ExpenseList({ expenses, onDelete }) {
     if (expenses.length === 0) return null;
     return (
-        <table className="" border="1">
-            <thead>
-                <tr>
-                    <th>Descriptions</th>
-                    <th>Amount</th>
-                    <th>Categories</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {expenses.map((expense) => (
-                    <tr key={expense.id}>
-                        <td>{expense.description}</td>
-                        <td>{expense.amount}</td>
-                        <td>{expense.category}</td>
+        <div className="table_container">
+            <table className="expense_table">
+                <thead>
+                    <tr>
+                        <th>Descriptions</th>
+                        <th>Amount</th>
+                        <th>Categories</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {expenses.map((expense) => (
+                        <tr key={expense.id}>
+                            <td>{expense.description}</td>
+                            <td>{expense.amount}</td>
+                            <td>{expense.category}</td>
+                            <td>
+                                <button onClick={() => onDelete(expense.id)}>Delete</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
                         <td>
-                            <button onClick={() => onDelete(expense.id)}>Delete</button>
+                            ${expenses.reduce((acc, expense) => parseInt(expense.amount) + acc, 0)}
                         </td>
                     </tr>
-                ))}
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td>Total</td>
-                    <td>${expenses.reduce((acc, expense) => parseInt(expense.amount) + acc, 0)}</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tfoot>
-        </table>
+                </tfoot>
+            </table>
+        </div>
     );
 }
 
